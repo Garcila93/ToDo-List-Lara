@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nuevo producto</h1>
+<form method="post" action="#" th:action="@{/tarea/submit}" th:object="${tarea}">
+
+    <input type="hidden" id="identificador" th:field="*{id}" />
+
+    <input type="text" id="nombre" placeholder="Descripción" th:field="*{descripcion}" />
+
+    <input type="datetime-local" disabled="disabled" name=fecha id="fechaActual" th:field="*{fechaActual}" />
+
+    <input type="datetime-local" id="fechaCaducidad" placeholder="fecha de caducidad" th:field="*{fechaCaducidad}" />
+
+    <input type="submit" value="Enviar" />
+
+</form>
+</body>
+</html>
